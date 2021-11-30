@@ -11,12 +11,17 @@ import { Book } from './Book';
 })
 export class BookServicesService {
 
-UrlApi : string = environment.apiUrl;
+private UrlApi : string = environment.apiUrl;
 
   constructor(private httpClient: HttpClient) { }
 
   GetAll(){
 
     return this.httpClient.get(this.UrlApi + "v1/Books");
+  }
+
+  Delete(id:any){
+
+    return this.httpClient.delete(this.UrlApi + "v1/Books/"+id);
   }
 }
