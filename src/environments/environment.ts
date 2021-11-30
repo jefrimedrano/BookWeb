@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://fakerestapi.azurewebsites.net/api/'
-  // apiUrl: 'https://localhost:44333/api/'
+  apiUrl: 'https://localhost:44333/api/'
 };
 
 /*
