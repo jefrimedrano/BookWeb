@@ -1,0 +1,25 @@
+<div class="card mt-3">
+    <div class="card-header">
+        Book
+    </div>
+    <div class="card-body">
+        <div class="row">
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Title</label>
+                  <input type="text" value="{{Book.title}}" class="form-control" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Page Count</label>
+                    <input type="text" value="{{Book.pageConut}}" class="form-control" readonly>
+                  </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">description</label>
+                    <textarea type="text" value="{{Book.description}}" class="form-control" readonly> </textarea>
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Publish Date</label>
+                  <input type="text" value="{{Book.publishDate | date: 'yyyy-MM-dd'}}"  class="form-control" readonly >
+                </div>
+        </div>
+    </div>
+</div>
