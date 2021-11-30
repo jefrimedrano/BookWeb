@@ -17,10 +17,21 @@ export class GetAllComponent implements OnInit {
       this.Books = response;
       console.log(response);
     }, error => {
-      //alert(console.error);
-      console.log(console.error);
+      alert(console.error);
+      
     }
     );
   }
 
+  Borrar(id:any, iControl:any){
+
+    if (window.confirm("Desea Borrar el registo")){
+      this.bookservices.Delete(id).subscribe((reponse)=>{
+        this.Books.splice(iControl,1);
+      }, (error) => {
+        alert(console.error);
+        
+      });
+    } 
+  }
 }

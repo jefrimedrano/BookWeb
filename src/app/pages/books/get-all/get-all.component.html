@@ -22,12 +22,14 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let book of Books | paginate: { itemsPerPage: 5, currentPage: page }">
+              <tr *ngFor="let book of Books | paginate: { itemsPerPage: 5, currentPage: page }; let iControl =  index">
                 <th>{{book.id}}</th>
                 <th>{{book.title}}</th>
                 <th style="max-width: 25ch;">{{book.description}}</th>
                 <th>{{book.publishDate | date: 'yyyy-MM-dd'}}</th>
-                <th></th>
+                <th>
+                    <a class="btn btn-danger" role="button" (click)="Borrar(book.id,iControl)">Borrar</a>
+                </th>
               </tr>
             </tbody>
           </table>
