@@ -1,0 +1,36 @@
+<div class="card mt-5">
+    <div class="card-header">
+        Books
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="#" class="btn btn-primary">Crear Nuevo</a>
+            </div>
+            <div class="col-md-8">
+                
+            </div>
+        </div>
+        <table class="table table-bordered mt-4">
+            <thead class="thead-primary">
+              <tr>
+                <th >Id</th>
+                <th >Title</th>
+                <th >Descripcion</th>
+                <th >Publish Date</th>
+                <th >Options</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let book of Books | paginate: { itemsPerPage: 5, currentPage: page }">
+                <th>{{book.id}}</th>
+                <th>{{book.title}}</th>
+                <th style="max-width: 25ch;">{{book.description}}</th>
+                <th>{{book.publishDate | date: 'yyyy-MM-dd'}}</th>
+                <th></th>
+              </tr>
+            </tbody>
+          </table>
+          <pagination-controls (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+    </div>
+</div>
