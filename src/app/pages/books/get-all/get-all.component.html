@@ -28,6 +28,7 @@
                 <th style="max-width: 25ch;">{{book.description}}</th>
                 <th>{{book.publishDate | date: 'yyyy-MM-dd'}}</th>
                 <th>
+                    <a routerLink = "/detalle-books/{{book.id}}" class="btn btn-primary">Detalle</a> | 
                     <a class="btn btn-danger" role="button" (click)="Borrar(book.id,iControl)">Borrar</a>
                 </th>
               </tr>

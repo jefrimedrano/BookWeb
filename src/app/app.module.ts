@@ -8,11 +8,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { DetalleComponent } from './pages/books/detalle/detalle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GetAllComponent
+    GetAllComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,

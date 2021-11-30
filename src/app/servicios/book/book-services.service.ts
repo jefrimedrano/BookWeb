@@ -24,4 +24,9 @@ private UrlApi : string = environment.apiUrl;
 
     return this.httpClient.delete(this.UrlApi + "v1/Books/"+id);
   }
+
+  GetById(id:any){
+
+    return this.httpClient.get(this.UrlApi + "v1/Books/"+id);
+  }
 }
